@@ -9,10 +9,8 @@ function update(msg, model) {
             return {...model}
         case MSGS.DELETE:
             return { ...model, locations: model.locations.filter((_, i) => i!== msg.index ) };
-        case LOAD_WEATHER:
-            return {...model, locations: [
-                ...model.locations, msg.payload], location: ""
-            };
+        case MSGS.LOAD_WEATHER:
+            return {...model, locations: [ ...model.locations, msg.payload], location: "" };
         default:
             return { ...model };
     }

@@ -6,6 +6,4 @@ const { initModel } = require ('./model.js');
 
 // The root node of the app (the div with id="app" in index.html)
 const rootNode = document.getElementById("app");
-
-// Start the app
 app(initModel, update, view, rootNode);

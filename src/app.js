@@ -1,6 +1,7 @@
 const createElement = require("virtual-dom/create-element");
 const {diff, patch } = require ("virtual-dom");
 const MSGS = require("./model.js");
+const fetchWeatherInfo = require("./get-weather.js");
 
 
 function app(initModel, update, view, node) {
@@ -9,6 +10,7 @@ function app(initModel, update, view, node) {
     let rootNode = createElement(currentView);
     node.appendChild(rootNode);
     async function dispatch(msg) {
+        console.log("Dispatch called:", msg);
         if (msg.type === MSGS.ADD) {
             if(!model.location) return;
             try {

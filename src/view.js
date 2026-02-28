@@ -1,6 +1,6 @@
 const hh = require("hyperscript-helpers");
 const { h } = require("virtual-dom");
-const MSGS = require("./model.js");
+const {MSGS} = require("./model.js");
 
 const { div, button, input, table, thead, tbody, tr, th, td } = hh(h);
 
