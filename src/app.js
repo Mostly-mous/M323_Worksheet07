@@ -15,9 +15,8 @@ function app(initModel, update, view, node) {
             if(!model.location) return;
             try {
                 const weather = await fetchWeatherInfo(model.location);
-
                 dispatch({
-                    type: MSGS.LOAD_WEATHER,
+                    type: MSGS.ADD,
                     payload: {
                         location: model.location,
                         temp: weather.temp,

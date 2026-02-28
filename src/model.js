@@ -1,8 +1,7 @@
 const MSGS = {
     LOCATION: "LOCATION",
     ADD: "ADD",
-    DELETE: "DELETE",
-    LOAD_WEATHER: "LOAD_WEATHER"
+    DELETE: "DELETE"
 };
 
 const initModel = {
