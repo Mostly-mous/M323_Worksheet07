@@ -1,5 +1,7 @@
 const createElement = require("virtual-dom/create-element");
 const {diff, patch } = require ("virtual-dom");
+const MSGS = require("./model.js");
+
 
 function app(initModel, update, view, node) {
     let model = initModel;
