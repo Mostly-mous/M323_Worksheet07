@@ -1,7 +1,8 @@
 const MSGS = {
     LOCATION: "LOCATION",
     ADD: "ADD",
-    DELETE: "DELETE"
+    DELETE: "DELETE",
+    LOAD_WEATHER: "LOAD_WEATHER"
 };
 
 const initModel = {
@@ -9,7 +10,7 @@ const initModel = {
     temp: "",
     high: "",
     low: "",
-    locatons: [],
+    locations: [],
 };
 
 module.exports = { MSGS, initModel};

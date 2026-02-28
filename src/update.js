@@ -4,14 +4,14 @@ function update(msg, model) {
             return {...model, location: msg.value};
         case MSGS.ADD:
             if (!model.location) {return model;}
-            return {...model, locations: [ ...model.locatons, {location: model.location, temp: model.temp, high: model.high, low: model.low},],
+            return {...model, locations: [ ...model.locations, {location: model.location, temp: model.temp, high: model.high, low: model.low},],
              location: "",
              temp: "",
              high: "",
              low: "",
             };
         case MSGS.DELETE:
-            return { ...model, location: "", temp: "", high: "", low: "" };
+            return { ...model, location: model.locations.filter((_, i) => i!== msg.index ) };
         default:
             return { ...model };
     }
