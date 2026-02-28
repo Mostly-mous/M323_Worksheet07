@@ -1,7 +1,7 @@
-import { createElement } from "virtual-dom/create-element";
-import {diff, patch } from "virtual-dom";
+const createElement = require("virtual-dom/create-element");
+const {diff, patch } = require ("virtual-dom");
 
-export function app(initModel, update, view, node) {
+function app(initModel, update, view, node) {
     let model = initModel;
     let currentView = view(dispatch, model);
     let rootNode = createElement(currentView);
@@ -34,4 +34,4 @@ export function app(initModel, update, view, node) {
     }
 }
 
-export default {app};
+module.exports = app;

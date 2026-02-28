@@ -1,7 +1,7 @@
-import {view} from "./view.js";
-import {update} from "./update.js";
-import {app} from "./app.js";
-import { initModel } from "./model.js";
+const view = require('./view.js');
+const update = require ('./update.js');
+const app = require ('./app.js');
+const { initModel } = require ('./model.js');
 
 
 // The root node of the app (the div with id="app" in index.html)

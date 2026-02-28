@@ -1,9 +1,9 @@
-import hh from "hyperscript-helpers";
-import { h } from "virtual-dom";
+const hh = require("hyperscript-helpers");
+const { h } = require("virtual-dom");
 
 const { div, button, input, table, thead, tbody, tr, th, td } = hh(h);
 
-export function view(dispatch, model) {
+function view(dispatch, model) {
     const btnStyleB = "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 tounded w-30";
     const btnStyleR = "bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 tounded w-30";
 
